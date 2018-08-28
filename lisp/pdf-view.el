@@ -679,7 +679,7 @@ next page only on typing SPC (ARG is nil)."
                   ;; Workaround rounding/off-by-one issues.
                   (memq pdf-view-display-size
                         '(fit-height fit-page)))
-          (pdf-view-next-page)
+          (pdf-view-next-page-command)
           (when (/= cur-page (pdf-view-current-page))
             (image-bob)
             (image-bol 1))
@@ -700,7 +700,7 @@ to previous page only on typing DEL (ARG is nil)."
                   ;; Workaround rounding/off-by-one issues.
                   (memq pdf-view-display-size
                         '(fit-height fit-page)))
-          (pdf-view-previous-page)
+          (pdf-view-previous-page-command)
           (when (/= cur-page (pdf-view-current-page))
             (image-eob)
             (image-bol 1))
